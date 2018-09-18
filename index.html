@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Auto Play Video</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+
+    $(window).scroll(function() {
+$('video').each(function(){
+    if ($(this).visible( true )) {
+        $(this)[0].play();
+    } else {
+        $(this)[0].pause();
+    }
+})
+});
+
+</script>    
+
+</head>
+<body>
+<div style="height: 600px;border: 1px solid #999;">
+    <video class="vid" width="320" height="240" autoplay="autoplay" muted loop>
+        <source src="one.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>    
+</div>    
+
+<div style="height: 600px;border: 1px solid #999;margin-top: 10rem;">
+    <video class="vid" width="320" height="240" autoplay="autoplay" muted loop>
+        <source src="one.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>    
+</div>    
+
+<div style="height: 600px;border: 1px solid #999;margin-top: 10rem;">
+        <video class="vid" width="320" height="240" autoplay="autoplay" muted loop>
+            <source src="one.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>    
+    </div>    
+
+<script>
+    $('.vid').bind('contextmenu', function(e) {
+    return false;
+}); 
+</script>    
+
+</body>
+</html>
